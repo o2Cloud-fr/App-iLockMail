@@ -53,47 +53,27 @@ class _HomeWidgetState extends State<HomeWidget> {
         backgroundColor: FlutterFlowTheme.of(context).primaryText,
         body: SafeArea(
           top: true,
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Align(
-                alignment: const AlignmentDirectional(0.0, 0.0),
-                child: Image.asset(
-                  'assets/images/logoilo.webp',
-                  width: 350.0,
-                  height: 350.0,
-                  fit: BoxFit.cover,
+          child: Opacity(
+            opacity: 0.7,
+            child: Column(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Align(
+                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  child: Image.asset(
+                    'assets/images/logoilo.webp',
+                    width: 350.0,
+                    height: 350.0,
+                    fit: BoxFit.cover,
+                  ),
                 ),
-              ),
-              FFButtonWidget(
-                onPressed: () async {
-                  context.pushNamed('Register');
-                },
-                text: 'Register',
-                options: FFButtonOptions(
-                  width: 200.0,
-                  height: 50.0,
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                  iconPadding:
-                      const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
-                  color: Colors.white,
-                  textStyle: FlutterFlowTheme.of(context).titleMedium.override(
-                        fontFamily: 'Readex Pro',
-                        color: Colors.black,
-                      ),
-                  elevation: 2.0,
-                  borderRadius: BorderRadius.circular(25.0),
-                ),
-              ),
-              Align(
-                alignment: const AlignmentDirectional(0.0, 0.0),
-                child: FFButtonWidget(
+                FFButtonWidget(
                   onPressed: () async {
-                    context.pushNamed('Webmail');
+                    context.pushNamed('Register');
                   },
-                  text: 'Webmail',
+                  text: 'Register',
                   options: FFButtonOptions(
                     width: 200.0,
                     height: 50.0,
@@ -104,14 +84,39 @@ class _HomeWidgetState extends State<HomeWidget> {
                     textStyle:
                         FlutterFlowTheme.of(context).titleMedium.override(
                               fontFamily: 'Readex Pro',
-                              color: FlutterFlowTheme.of(context).primaryText,
+                              color: Colors.black,
                             ),
                     elevation: 2.0,
                     borderRadius: BorderRadius.circular(25.0),
                   ),
                 ),
-              ),
-            ],
+                Align(
+                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  child: FFButtonWidget(
+                    onPressed: () async {
+                      context.pushNamed('Webmail');
+                    },
+                    text: 'Webmail',
+                    options: FFButtonOptions(
+                      width: 200.0,
+                      height: 50.0,
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      iconPadding:
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                      color: Colors.white,
+                      textStyle:
+                          FlutterFlowTheme.of(context).titleMedium.override(
+                                fontFamily: 'Readex Pro',
+                                color: FlutterFlowTheme.of(context).primaryText,
+                              ),
+                      elevation: 2.0,
+                      borderRadius: BorderRadius.circular(25.0),
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

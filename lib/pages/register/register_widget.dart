@@ -52,14 +52,16 @@ class _RegisterWidgetState extends State<RegisterWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).primary,
+          backgroundColor: FlutterFlowTheme.of(context).primaryText,
           automaticallyImplyLeading: false,
           title: Text(
             'Inscription',
+            textAlign: TextAlign.center,
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Outfit',
                   color: Colors.white,
                   fontSize: 22.0,
+                  fontWeight: FontWeight.normal,
                 ),
           ),
           actions: const [],

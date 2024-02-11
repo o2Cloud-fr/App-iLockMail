@@ -52,7 +52,7 @@ class _WebmailWidgetState extends State<WebmailWidget> {
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).primary,
+          backgroundColor: FlutterFlowTheme.of(context).primaryText,
           automaticallyImplyLeading: false,
           title: Text(
             'Webmail',
