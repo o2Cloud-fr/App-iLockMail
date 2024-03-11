@@ -1,4 +1,4 @@
-# Blank-iLockMail
+# iLockMail App Mobile
 
 A new Flutter project.
 
